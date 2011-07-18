@@ -1,9 +1,6 @@
 from distutils.core import setup
 import os
 
-from regplus import get_version
-
-
 # Compile the list of packages available, because distutils doesn't have
 # an easy way to do this.
 packages, data_files = [], []
@@ -27,7 +24,7 @@ for dirpath, dirnames, filenames in os.walk('regplus'):
 
 
 setup(name='django-regplus',
-      version=get_version().replace(' ', '-'),
+      version='0.1',
       description='An extensible user-registration application for Django, based heavily on django-registration',
       author='Audrey Roy',
       author_email='audreyr@cartwheelweb.com',
