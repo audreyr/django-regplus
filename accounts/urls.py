@@ -2,8 +2,8 @@ from django.conf import settings
 from django.conf.urls.defaults import patterns, include, url
 from django.views.generic.simple import direct_to_template
 
-from regplus.views import activate
-from regplus.views import register
+from registration.views import activate
+from registration.views import register
 
 from accounts.forms import RegistrationForm
 
