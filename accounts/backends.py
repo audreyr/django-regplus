@@ -2,8 +2,8 @@ from django.conf import settings
 from django.contrib.sites.models import RequestSite
 from django.contrib.sites.models import Site
 
-from regplus import signals
-from regplus.models import RegistrationProfile
+from registration import signals
+from registration.models import RegistrationProfile
 
 from accounts.forms import RegistrationForm
 
