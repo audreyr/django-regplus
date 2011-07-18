@@ -1,7 +1,7 @@
 from distutils.core import setup
 import os
 
-from registration import get_version
+from regplus import get_version
 
 
 # Compile the list of packages available, because distutils doesn't have
@@ -11,7 +11,7 @@ root_dir = os.path.dirname(__file__)
 if root_dir:
     os.chdir(root_dir)
 
-for dirpath, dirnames, filenames in os.walk('registration'):
+for dirpath, dirnames, filenames in os.walk('regplus'):
     # Ignore dirnames that start with '.'
     for i, dirname in enumerate(dirnames):
         if dirname.startswith('.'): del dirnames[i]
@@ -26,17 +26,17 @@ for dirpath, dirnames, filenames in os.walk('registration'):
             data_files.append(os.path.join(prefix, f))
 
 
-setup(name='django-registration',
+setup(name='django-regplus',
       version=get_version().replace(' ', '-'),
-      description='An extensible user-registration application for Django',
-      author='James Bennett',
-      author_email='james@b-list.org',
-      url='http://www.bitbucket.org/ubernostrum/django-registration/wiki/',
-      download_url='http://www.bitbucket.org/ubernostrum/django-registration/get/v0.7.gz',
-      package_dir={'registration': 'registration'},
+      description='An extensible user-registration application for Django, based heavily on django-registration',
+      author='Audrey Roy',
+      author_email='audreyr@cartwheelweb.com',
+      url='https://github.com/audreyr/django-regplus',
+      download_url='https://github.com/audreyr/django-regplus/tarball/master',
+      package_dir={'regplus': 'regplus'},
       packages=packages,
       package_data={'registration': data_files},
-      classifiers=['Development Status :: 4 - Beta',
+      classifiers=['Development Status :: 2 - Pre-Alpha',
                    'Environment :: Web Environment',
                    'Framework :: Django',
                    'Intended Audience :: Developers',
