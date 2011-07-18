@@ -5,4 +5,5 @@ include MANIFEST.in
 include README
 include AUTHORS
 recursive-include docs *
+recursive-include registration/templates *
 recursive-include registration/locale *
